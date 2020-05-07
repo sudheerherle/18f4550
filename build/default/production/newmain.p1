@@ -1,0 +1,63 @@
+Version 4.0 HI-TECH Software Intermediate Code
+[p mainexit ]
+"14 newmain.c
+[; ;newmain.c: 14: int add(int a,int b);
+[v _add `(i ~T0 @X0 0 ef2`i`i ]
+[v $root$_main `(v ~T0 @X0 0 e ]
+"16 newmain.c
+[; ;newmain.c: 16: int main(int argc, char** argv) {
+[v _main `(i ~T0 @X0 1 ef2`i`**uc ]
+{
+[e :U _main ]
+[v _argc `i ~T0 @X0 1 r1 ]
+[v _argv `**uc ~T0 @X0 1 r2 ]
+[f ]
+"17
+[; ;newmain.c: 17:     int d = 12;
+[v _d `i ~T0 @X0 1 a ]
+[e = _d -> 12 `i ]
+"18
+[; ;newmain.c: 18:     int e = 15;
+[v _e `i ~T0 @X0 1 a ]
+[e = _e -> 15 `i ]
+"19
+[; ;newmain.c: 19:     int f = 0;
+[v _f `i ~T0 @X0 1 a ]
+[e = _f -> 0 `i ]
+"20
+[; ;newmain.c: 20:     f = add(d,e);
+[e = _f ( _add (2 , _d _e ]
+"21
+[; ;newmain.c: 21:     f = f * 2;
+[e = _f * _f -> 2 `i ]
+"22
+[; ;newmain.c: 22:     return (0);
+[e ) -> 0 `i ]
+[e $UE 8  ]
+"23
+[; ;newmain.c: 23: }
+[e :UE 8 ]
+}
+"25
+[; ;newmain.c: 25: int add(int a, int b){
+[v _add `(i ~T0 @X0 1 ef2`i`i ]
+{
+[e :U _add ]
+[v _a `i ~T0 @X0 1 r1 ]
+[v _b `i ~T0 @X0 1 r2 ]
+[f ]
+"26
+[; ;newmain.c: 26:     int c = 0;
+[v _c `i ~T0 @X0 1 a ]
+[e = _c -> 0 `i ]
+"27
+[; ;newmain.c: 27:     c = a + b;
+[e = _c + _a _b ]
+"28
+[; ;newmain.c: 28:     return c;
+[e ) _c ]
+[e $UE 9  ]
+"29
+[; ;newmain.c: 29: }
+[e :UE 9 ]
+}
