@@ -8,6 +8,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#pragma config FOSC = INTOSC_HS // Oscillator Selection bits (Internal oscillator, HS oscillator used by USB (INTHS))
+#pragma config IESO = ON        // Internal/External Oscillator Switchover bit (Oscillator Switchover mode enabled)
+#pragma config WDT = OFF  
+#pragma config LVP = OFF
+
 /*
  * 
  */
